@@ -356,7 +356,7 @@
     <script>
         async function fetchBotProfile() {
             try {
-                const response = await fetch('/botprofile');
+                const response = await fetch('https://thiccboi.onrender.com//botprofile');
                 const data = await response.json();
                 document.getElementById('bot-avatar').src = data.pfpurl;
                 document.getElementById('bot-username').textContent = data.username;
@@ -365,7 +365,7 @@
                 const verifiedIcon = document.getElementById('verified-icon');
                 verifiedIcon.style.display = data.verified ? 'block' : 'none';
 
-                const statusResponse = await fetch('/botstatus');
+                const statusResponse = await fetch('https://thiccboi.onrender.com//botstatus');
                 const statusData = await statusResponse.json();
                 document.getElementById('bot-activity-status').textContent = statusData.activity;
 
@@ -417,7 +417,7 @@
             // Add this to your existing JavaScript
             async function fetchBotStatusDetails() {
                 try {
-                    const response = await fetch('/botstatus');
+                    const response = await fetch('https://thiccboi.onrender.com//botstatus');
                     const data = await response.json();
                     const statusElement = document.getElementById('bot-status');
 
@@ -459,7 +459,7 @@
 
         async function fetchAllCommands() {
             try {
-                const response = await fetch('/allcmds');
+                const response = await fetch('https://thiccboi.onrender.com//allcmds');
                 const data = await response.json();
                 document.getElementById('allcmds').style.display = 'block';
                 updateCommandsTable(data);
